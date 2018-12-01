@@ -1,5 +1,3 @@
-
-
 var side = 9;
 var grassArr = [];
 var xotakerArr = [];
@@ -9,8 +7,8 @@ var jurArr = [];
 var amenatunArr = [];
 var gishtunArr = [];
 var xotatunArr = [];
-var m = 20 //Math.round((Math.random() * 20) + 5)
-var n = 20 //Math.round((Math.random() * 20) + 5)
+var m = Math.round((Math.random() * 50) + 5)
+var n = Math.round((Math.random() * 50) + 5)
 var matrix = []
 
 function getRandInt(max) {
@@ -23,15 +21,10 @@ for (var y = 0; y < m; y++) {
 
 
 
-        matrix[y].push(getRandInt(6))
-
-
-
-
+        matrix[y].push(getRandInt(8))
 
     }
 } console.log(matrix)
-
 
 function setup() {
 
@@ -79,10 +72,6 @@ function setup() {
     createCanvas(matrix[0].length * side, matrix.length * side);
     background('#acacac');
 }
-
-
-
-
 function draw() {
 
     for (var y = 0; y < matrix.length; y++) {
@@ -116,10 +105,7 @@ function draw() {
             }
 
             rect(x * side, y * side, side, side)
-            /*
-            fill("blue")
-                text(x + " " + y, x * side + side / 2, y * side + side / 2)
-           */
+            
         }
     }
 
@@ -160,17 +146,4 @@ function draw() {
     for (var i in xotatunArr) {
         xotatunArr[i].mult()
     }
-
-
-    /*
-    console.log(grassArr.length,
-        xotakerArr.length,
-        gishatichArr.length,
-        amenakerArr.length,
-        jurArr.length,
-        amenatunArr.length,
-        gishtunArr.length,
-        xotatunArr.length)
-    }
-    */
 }

@@ -14,7 +14,6 @@ class Grass {
             [this.x + 1, this.y + 1]
         ]
     }
-
     chooseCell(character) {
         var found = []
         for (var i in this.directions) {
@@ -30,7 +29,6 @@ class Grass {
         return found;
 
     }
-
     mult() {
         var empty = random(this.chooseCell(0))
         this.multiply++
@@ -43,10 +41,6 @@ class Grass {
         }
     }
 }
-
-
-
-
 class Xotaker {
     constructor(x, y) {
         this.x = x;
@@ -63,7 +57,6 @@ class Xotaker {
             [this.x + 1, this.y + 1]
         ]
     }
-
     getNewDirections() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -76,7 +69,6 @@ class Xotaker {
             [this.x + 1, this.y + 1]
         ]
     }
-
     chooseCell(character) {
         this.getNewDirections()
         var found = []
@@ -93,7 +85,6 @@ class Xotaker {
         return found;
 
     }
-
     mult() {
         var empty = random(this.chooseCell(0))
         if (empty && this.energy > 10) {
@@ -104,7 +95,6 @@ class Xotaker {
             xotakerArr.push(xt)
         }
     }
-
     move() {
         var empty = random(this.chooseCell(0))
         this.energy--;
@@ -118,7 +108,6 @@ class Xotaker {
             this.y = newY
         }
     }
-
     eat() {
         var food = random(this.chooseCell(1))
         if (food) {
@@ -138,7 +127,6 @@ class Xotaker {
             this.energy += 2
         }
     }
-
     die() {
         if (this.energy <= 0) {
             matrix[this.y][this.x] = 0
@@ -150,7 +138,6 @@ class Xotaker {
         }
     }
 }
-
 class Gishatich {
     constructor(x, y) {
         this.x = x;
@@ -167,8 +154,6 @@ class Gishatich {
             [this.x + 1, this.y + 1]
         ]
     }
-
-
     getNewDirections() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -181,7 +166,6 @@ class Gishatich {
             [this.x + 1, this.y + 1]
         ]
     }
-
     chooseCell(character) {
         this.getNewDirections()
         var found = []
@@ -198,7 +182,6 @@ class Gishatich {
         return found;
 
     }
-
     mult() {
         var empty = random(this.chooseCell(0))
         if (empty && this.energy > 15) {
@@ -209,7 +192,6 @@ class Gishatich {
             gishatichArr.push(gh)
         }
     }
-
     move() {
         var empty = random(this.chooseCell(0))
         this.energy -= 2;
@@ -223,7 +205,6 @@ class Gishatich {
             this.y = newY
         }
     }
-
     eat() {
         var food = random(this.chooseCell(2))
         if (food) {
@@ -243,7 +224,6 @@ class Gishatich {
 
         }
     }
-
     die() {
         if (this.energy <= 0) {
             matrix[this.y][this.x] = 0
@@ -271,8 +251,6 @@ class Amenaker {
             [this.x + 1, this.y + 1]
         ]
     }
-
-
     getNewDirections() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -285,7 +263,6 @@ class Amenaker {
             [this.x + 1, this.y + 1]
         ]
     }
-
     chooseCell(character) {
         this.getNewDirections()
         var found = []
@@ -302,7 +279,6 @@ class Amenaker {
         return found;
 
     }
-
     mult() {
         var empty = random(this.chooseCell(0))
         if (empty && this.energy > 13) {
@@ -313,7 +289,6 @@ class Amenaker {
             amenakerArr.push(am)
         }
     }
-
     move() {
         var empty = random(this.chooseCell(0))
         this.energy -= 2;
