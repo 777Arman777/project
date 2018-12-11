@@ -1,4 +1,4 @@
-class Gishtun extends LivingCreature {
+module.exports = class Gishtun extends LivingCreature {
     constructor(x, y) {
         super(x, y);
         this.energy = 15;
@@ -25,8 +25,8 @@ class Gishtun extends LivingCreature {
             var newX = empty[0]
             var newY = empty[1]
             matrix[newY][newX] = 4
-            var pu = new Amenaker(newX, newY)
-            amenakerArr.push(pu)
+            var pt = new Amenaker(newX, newY)
+            amenakerArr.push(pt)
         }
     }
 }

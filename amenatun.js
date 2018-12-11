@@ -1,4 +1,4 @@
-class Amenatun extends LivingCreature {
+module.exports = class Amenatun extends LivingCreature {
     constructor(x, y) {
         super(x, y);
         this.energy = 15;

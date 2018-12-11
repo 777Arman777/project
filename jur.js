@@ -1,4 +1,4 @@
-class Jur extends LivingCreature {
+module.exports = class Jur extends LivingCreature {
     constructor(x, y) {
         super(x, y);
         this.energy = 9;
